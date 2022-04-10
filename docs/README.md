@@ -7,4 +7,7 @@
 | 백     |                                    |                                                                            |      |   |
 |        |                                    |                                                                            |      |   |
 
+### PBL
+- [PBL](https://docs.google.com/spreadsheets/d/17SxXTxhnBxl7S9I7mn_dvHlaTFUNnMLTood4PT1zEtY/edit#gid=0)
+
 ## 비기능적 요건
