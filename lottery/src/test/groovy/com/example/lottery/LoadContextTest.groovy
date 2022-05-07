@@ -1,5 +1,6 @@
 package com.example.lottery
 
+import com.example.lottery.app.LotteryController
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import spock.lang.Specification

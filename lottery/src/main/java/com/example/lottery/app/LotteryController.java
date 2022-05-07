@@ -1,4 +1,4 @@
-package com.example.lottery;
+package com.example.lottery.app;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
