@@ -14,6 +14,6 @@ class Loto6ServiceTest extends Specification {
 
         then:
         actual.stream().filter( o -> expect.contains(o))
-        6 == expect.size()
+        actual.size() == expect.size()
     }
 }
