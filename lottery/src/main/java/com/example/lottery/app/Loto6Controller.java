@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/lotto6")
-public class LotteryController {
+@RequestMapping("/loto6")
+public class Loto6Controller {
 
     @GetMapping
-    public String lotto6() {
+    public String loto6() {
         return "1, 2, 3, 4, 5, 6";
     }
 }
