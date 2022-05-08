@@ -14,11 +14,11 @@ class Loto7ControllerTest extends Specification{
     def "when get is performed then the response has status 200 and content is '1, 2, 3, 4, 5, 6, 7'"() {
         expect: "Status is 200 and the response is '1, 2, 3, 4, 5, 6, 7'"
         webTestClient.get()
-            .uri("/lotto7")
+            .uri("/loto7")
             .exchange()
             .expectStatus().isOk()
-            .expectBody(String)
-            .value( result -> result == "1, 2, 3, 4, 5, 6, 7")
+            .expectBody(String.class)
+            .isEqualTo("1, 2, 3, 4, 5, 6, 7")
     }
 
 }

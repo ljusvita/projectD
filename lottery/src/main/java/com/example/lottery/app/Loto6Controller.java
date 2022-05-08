@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Loto6Controller {
 
     @GetMapping
-    public String lotto6() {
+    public String loto6() {
         return "1, 2, 3, 4, 5, 6";
     }
 }
