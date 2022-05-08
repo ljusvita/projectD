@@ -17,7 +17,7 @@ class Loto6ControllerTest extends Specification {
                 .uri("/loto6")
                 .exchange()
                 .expectStatus().isOk()
-                .expectBody(String.class)
-                .isEqualTo("1, 2, 3, 4, 5, 6")
+                .expectBody(List<String>.class)
+                .isEqualTo(List.of("1", "2", "3", "4", "5", "6"))
     }
 }
