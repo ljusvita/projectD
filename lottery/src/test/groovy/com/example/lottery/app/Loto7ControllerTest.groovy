@@ -5,8 +5,8 @@ import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
 import org.springframework.test.web.reactive.server.WebTestClient
 import spock.lang.Specification
 
-@WebFluxTest(Lottery7Controller.class)
-class Lottery7ClientTest extends Specification{
+@WebFluxTest(Loto7Controller.class)
+class Loto7ControllerTest extends Specification{
 
     @Autowired
     private WebTestClient webTestClient
