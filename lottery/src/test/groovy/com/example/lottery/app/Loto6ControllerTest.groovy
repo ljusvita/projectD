@@ -13,17 +13,6 @@ class Loto6ControllerTest extends Specification {
     @Autowired
     private WebTestClient webTestClient
 
-    @Ignore
-    def "when get is performed then the response has status 200 and content is '1, 2, 3, 4, 5, 6'"() {
-        expect: "Status is 200 and the response is '1, 2, 3, 4, 5, 6'"
-        webTestClient.get()
-                .uri("/loto6")
-                .exchange()
-                .expectStatus().isOk()
-                .expectBody(List<String>.class)
-                .isEqualTo(List.of("1", "2", "3", "4", "5", "6"))
-    }
-
     @Order(1)
     def "when get is performed then the response has status 200 and the content consist of json elements"() {
         expect: "Status is 200 and the response consist of json elements"
