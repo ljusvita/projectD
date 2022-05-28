@@ -22,6 +22,8 @@ class Loto6ControllerTest extends Specification {
                 .expectStatus().isOk()
                 .expectBody()
                 .jsonPath('$.numbers').isNotEmpty()
-//                .jsonPath('$.numbers6[0]').isEqualTo(1)
+                .jsonPath('$.numbers').isArray()
+                .consumeWith(
+                        result -> result.getResponseBody().size() == 6)
     }
 }
