@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Loto6 {
 
-    private List<Integer> numbers6;
+    private List<Integer> numbers;
 
-    public void setNumbers6(List<Integer> numbers6) {
-        this.numbers6 = numbers6;
+    public void setNumbers(List<Integer> numbers6) {
+        this.numbers = numbers6;
     }
 
-    public List<Integer> getNumbers6() {
-        return numbers6;
+    public List<Integer> getNumbers() {
+        return numbers;
     }
 }

@@ -32,7 +32,7 @@ class Loto6ControllerTest extends Specification {
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody()
-                .jsonPath('$.numbers6').isNotEmpty()
+                .jsonPath('$.numbers').isNotEmpty()
 //                .jsonPath('$.numbers6[0]').isEqualTo(1)
     }
 }

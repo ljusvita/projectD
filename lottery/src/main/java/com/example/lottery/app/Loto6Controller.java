@@ -16,7 +16,7 @@ public class Loto6Controller {
 //        return List.of("1", "2", "3", "4", "5", "6");
 //        Loto6Service service = new Loto6Service();
         Loto6 loto6 = new Loto6();
-        loto6.setNumbers6(List.of(1, 2, 3, 4, 5, 6));
+        loto6.setNumbers(List.of(1, 2, 3, 4, 5, 6));
         return Mono.just(loto6);
     }
 }
