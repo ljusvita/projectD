@@ -9,9 +9,9 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/loto6")
 public class Loto6Controller {
 
-    @GetMapping
-    public Mono<Loto6> loto6() {
-        Loto6Service service = new Loto6Service();
-        return Mono.just(service.pick());
-    }
+  @GetMapping
+  public Mono<Loto6> loto6() {
+    Loto6Service service = new Loto6Service();
+    return Mono.just(service.pick());
+  }
 }
