@@ -42,8 +42,8 @@ class Loto7ControllerTest extends Specification{
                 .uri("/loto7")
                 .exchange()
                 .expectStatus().isOk()
-                .expectBody(String.class)
-                .isEqualTo("1234567")
+                .expectBody()
+                .jsonPath('$.numbers').isNotEmpty()
+                .jsonPath('$.numbers[0]').isEqualTo(1)
     }
-
 }
