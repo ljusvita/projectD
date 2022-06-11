@@ -24,6 +24,8 @@ dependencies {
 	testImplementation 'org.codehaus.groovy:groovy-all:3.0.8'
 	testImplementation 'org.spockframework:spock-spring:2.1-M2-groovy-3.0'
 
+	// https://mvnrepository.com/artifact/org.springframework.data/spring-data-r2dbc
+	implementation 'org.springframework.data:spring-data-r2dbc:1.5.0'
 }
 
 tasks.named('test') {
