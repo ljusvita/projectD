@@ -14,8 +14,8 @@ class Loto6ControllerTest extends Specification {
     private WebTestClient webTestClient
 
     @Order(1)
-    def "when get is performed then the response has status 200 and the content consist of json elements"() {
-        expect: "Status is 200 and the response consist of json elements"
+    def "get 메소드가 실행되면 response 스테이터스 코드는 200이고 json 요소로 구성되어 있을 것"() {
+        expect: "스테이터스 코드 200 이고 numbers 라는 이름의 6개의 요소를 가진 json 객체일 것"
         webTestClient.get()
                 .uri("/loto6")
                 .exchange()
