@@ -26,6 +26,13 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.springframework.data/spring-data-r2dbc
 	implementation 'org.springframework.data:spring-data-r2dbc:1.5.0'
 	testImplementation 'com.h2database:h2:2.1.212'
+	
+	// for lombok
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.24'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 }
 
 tasks.named('test') {
