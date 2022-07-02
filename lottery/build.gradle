@@ -36,6 +36,9 @@ dependencies {
 
 	// for h2 db
 	testImplementation 'io.r2dbc:r2dbc-h2:1.0.0.RC1'
+
+	// db migration tool(r2dbc-migrate)
+	// implementation 'name.nkonev.r2dbc-migrate:r2dbc-migrate-spring-boot-starter:2.7.6'
 }
 
 tasks.named('test') {
