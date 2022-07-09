@@ -9,6 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
+
+import com.example.lottery.app.Loto7Router;
+
 import reactor.core.publisher.Flux;
 
 @SpringBootApplication
@@ -21,5 +24,10 @@ public class LotteryApplication {
   @Bean
   RouterFunction<ServerResponse> routes() {
     return route(GET("/"), req -> ok().body(Flux.just("Hello", "World!"), String.class));
+  }
+
+  @Bean
+  RouterFunction<ServerResponse> routess(Loto7Router loto7Router) {
+    return loto7Router.route();
   }
 }
