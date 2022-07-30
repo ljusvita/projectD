@@ -62,6 +62,6 @@ tasks.named('test') {
 
 tasks.register('updateGitHooks', Copy) {
 	from './scripts/pre-commit'
-	into './.git/hooks'
+	into './../.git/hooks'
 }
 compileJava.dependsOn updateGitHooks
