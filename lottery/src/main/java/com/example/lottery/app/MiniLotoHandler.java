@@ -7,9 +7,7 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
-/**
- * 미니로또 핸들러
- */
+/** 미니로또 핸들러 */
 @Component
 public class MiniLotoHandler {
 
