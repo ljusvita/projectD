@@ -5,7 +5,8 @@ stagedFiles=$(git diff --staged --name-only)
 
 # Part 2
 echo "Running spotlessApply. Formatting code..."
-./lottery/gradlew spotlessApply
+cd lottery
+./gradlew spotlessApply
 
 # Part 3
 for file in $stagedFiles; do
