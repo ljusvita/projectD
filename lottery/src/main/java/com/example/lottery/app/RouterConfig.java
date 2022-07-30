@@ -12,10 +12,10 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 public class RouterConfig {
 
   @Bean
-  public RouterFunction<ServerResponse> getUsers(MiniLotoHandler MiniLotoHandler) {
+  public RouterFunction<ServerResponse> getUsers(MiniLotoHandler miniLotoHandler) {
     return RouterFunctions.route(
         RequestPredicates.GET("/loto/mini")
             .and(RequestPredicates.accept(MediaType.APPLICATION_JSON)),
-        MiniLotoHandler::miniLoto);
+        miniLotoHandler::miniLoto);
   }
 }
