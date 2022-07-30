@@ -48,10 +48,6 @@ dependencies {
 	testImplementation "org.mockito:mockito-core:3.+"
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
-
 spotless {
 	java {
 		importOrder()
@@ -59,3 +55,13 @@ spotless {
 		googleJavaFormat() // has its own section below
 	}
 }
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.register('updateGitHooks', Copy) {
+	from './scripts/pre-commit'
+	into './.git/hooks'
+}
+compileJava.dependsOn updateGitHooks
