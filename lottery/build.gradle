@@ -1,9 +1,9 @@
 plugins {
-	id 'org.springframework.boot' version '2.7.0'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
-	id 'groovy'
-	id "com.diffplug.spotless" version "6.6.1"
+    id 'org.springframework.boot' version '2.7.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'groovy'
+    id "com.diffplug.spotless" version "6.6.1"
 }
 
 group = 'com.example'
@@ -11,57 +11,58 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
-	mavenCentral()
-	maven { url 'https://jitpack.io' }
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
-	testImplementation 'org.codehaus.groovy:groovy-all:3.0.8'
-	testImplementation 'org.spockframework:spock-spring:2.1-M2-groovy-3.0'
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.8'
+    testImplementation 'org.spockframework:spock-spring:2.1-M2-groovy-3.0'
 
-	// https://mvnrepository.com/artifact/org.springframework.data/spring-data-r2dbc
-	implementation 'org.springframework.data:spring-data-r2dbc:1.5.0'
-	testImplementation 'com.h2database:h2:2.1.212'
-	
-	// for lombok
-	compileOnly 'org.projectlombok:lombok:1.18.24'
-	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-r2dbc
+    implementation 'org.springframework.data:spring-data-r2dbc:1.5.0'
+    testImplementation 'com.h2database:h2:2.1.212'
 
-	testCompileOnly 'org.projectlombok:lombok:1.18.24'
-	testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+    // for lombok
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-	// for h2 db
-	testImplementation 'io.r2dbc:r2dbc-h2:1.0.0.RC1'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-	// db migration tool(r2dbc-migrate)
-	// implementation 'name.nkonev.r2dbc-migrate:r2dbc-migrate-spring-boot-starter:2.7.6'
+    // for h2 db
+    testImplementation 'io.r2dbc:r2dbc-h2:1.0.0.RC1'
 
-	// openapi 3.0
-	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
-	implementation 'org.springdoc:springdoc-openapi-webflux-ui:1.6.9'
+    // db migration tool(r2dbc-migrate)
+    // implementation 'name.nkonev.r2dbc-migrate:r2dbc-migrate-spring-boot-starter:2.7.6'
 
-	// mockito
-	testImplementation "org.mockito:mockito-core:3.+"
+    // openapi 3.0
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
+    implementation 'org.springdoc:springdoc-openapi-webflux-ui:1.6.9'
+
+    // mockito
+    testImplementation "org.mockito:mockito-core:3.+"
 }
 
 spotless {
-	java {
-		googleJavaFormat() // has its own section below
-		importOrder()
-		removeUnusedImports()
-	}
+    java {
+        target 'src/main/java/**/*.java'
+        googleJavaFormat() // has its own section below
+        importOrder()
+        removeUnusedImports()
+    }
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
 
 tasks.register('updateGitHooks', Copy) {
-	from './scripts/pre-commit'
-	into './../.git/hooks'
+    from './scripts/pre-commit'
+    into './../.git/hooks'
 }
 compileJava.dependsOn updateGitHooks
