@@ -1,5 +1,6 @@
 package com.example.lottery.app;
 
+
 import java.util.List;
 
 /** 로또6 도메인 클래스 */

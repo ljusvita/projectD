@@ -1,5 +1,6 @@
 package com.example.lottery.app;
 
+
 import java.util.List;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
