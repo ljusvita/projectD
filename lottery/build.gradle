@@ -50,10 +50,7 @@ dependencies {
 
 spotless {
     java {
-        target 'src/main/java/**/*.java'
         googleJavaFormat() // has its own section below
-        importOrder()
-        removeUnusedImports()
     }
 }
 
