@@ -7,22 +7,22 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
-/** 미니로또 핸들러. */
+/** 로또7 핸들러. */
 @Component
-public class MiniLotoHandler {
+public class Loto7Handler {
 
   /**
-   * 미니로또 번호를 반환하는 메소드.
+   * 로또7 번호를 반환하는 메소드.
    *
    * @param request http 리퀘스트 정보.
-   * @return 미니로또 5개 숫자를 http 스테이터스 200과 함께 반환.
+   * @return 로또7 7개 숫자를 http 스테이터스 200과 함께 반환.
    */
   public Mono<ServerResponse> loto7(ServerRequest request) {
-    MiniLoto miniLoto = new MiniLoto();
-    miniLoto.setNumbers(List.of(1, 2, 3, 4, 5));
+    Loto7 loto7 = new Loto7();
+    loto7.setNumbers(List.of(1, 2, 3, 4, 5, 6, 7));
 
     return ServerResponse.ok()
         .contentType(MediaType.APPLICATION_JSON)
-        .body(Mono.just(miniLoto), MiniLoto.class);
+        .body(Mono.just(loto7), Loto7.class);
   }
 }
