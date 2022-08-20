@@ -1,6 +1,5 @@
 package com.example.lottery.app;
 
-import java.util.List;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -18,11 +17,10 @@ public class Loto7Handler {
    * @return 로또7 7개 숫자를 http 스테이터스 200과 함께 반환.
    */
   public Mono<ServerResponse> loto7(ServerRequest request) {
-    Loto7 loto7 = new Loto7();
-    loto7.setNumbers(List.of(1, 2, 3, 4, 5, 6, 7));
+    Loto7Service loto7Service = new Loto7Service();
 
     return ServerResponse.ok()
         .contentType(MediaType.APPLICATION_JSON)
-        .body(Mono.just(loto7), Loto7.class);
+        .body(Mono.just(loto7Service.pick()), Loto7.class);
   }
 }

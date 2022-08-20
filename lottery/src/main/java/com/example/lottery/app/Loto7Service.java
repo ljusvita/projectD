@@ -1,6 +1,7 @@
 package com.example.lottery.app;
 
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 public class Loto7Service {
   public Loto7 pick() {
