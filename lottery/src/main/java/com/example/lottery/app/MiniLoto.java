@@ -1,6 +1,5 @@
 package com.example.lottery.app;
 
-
 import java.util.List;
 
 public class MiniLoto {
