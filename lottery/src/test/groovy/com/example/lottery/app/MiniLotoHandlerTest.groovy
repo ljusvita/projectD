@@ -22,7 +22,7 @@ class MiniLotoHandlerTest extends Specification {
     def setup() {
         RouterFunction<ServerResponse> routerFunction = RouterFunctions.route(
                 RequestPredicates.GET("/loto/mini") & RequestPredicates.accept(MediaType.APPLICATION_JSON),
-                miniLotoHandler::loto7)
+                miniLotoHandler::miniloto)
         webTestClient = WebTestClient.bindToRouterFunction(routerFunction).build();
     }
 

@@ -16,7 +16,7 @@ public class RouterConfig {
     return RouterFunctions.route(
         RequestPredicates.GET("/loto/mini")
             .and(RequestPredicates.accept(MediaType.APPLICATION_JSON)),
-        miniLotoHandler::loto7);
+        miniLotoHandler::miniloto);
   }
 
   @Bean
