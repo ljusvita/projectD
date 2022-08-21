@@ -22,8 +22,26 @@ class Loto7Test extends Specification {
         // 테스트 대상의 실행 결과
         then:
         loto7.getNumbers().size() == 7
+    }
 
-        // 테스트 대상의 결과 상세
-//        where:
+    def "로또7 퀵픽 실행 후 매번 다른 결과가 생성될 것"() {
+        // 테스트 대상의 실행에 전제되는 조건
+        given:
+        Loto7 firstGameOfLoto7 = new Loto7()
+        firstGameOfLoto7.quickPick()
+
+        Loto7 secondGameOfLoto7 = new Loto7()
+        secondGameOfLoto7.quickPick()
+
+        // 테스트 대상의 실행
+        when:
+        var firstGame = firstGameOfLoto7.getNumbers()
+        var secondGame = secondGameOfLoto7.getNumbers()
+
+        // 테스트 대상의 실행 결과
+        then:
+        firstGame.size() == 7
+        secondGame.size() == 7
+        firstGame != secondGame
     }
 }
