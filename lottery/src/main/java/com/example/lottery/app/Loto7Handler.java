@@ -17,10 +17,8 @@ public class Loto7Handler {
    * @return 로또7 7개 숫자를 http 스테이터스 200과 함께 반환.
    */
   public Mono<ServerResponse> loto7(ServerRequest request) {
-    Loto7Service loto7Service = new Loto7Service();
-
     return ServerResponse.ok()
         .contentType(MediaType.APPLICATION_JSON)
-        .body(Mono.just(loto7Service.pick()), Loto7.class);
+        .body(Mono.just(new Loto7Service().pick()), Loto7.class);
   }
 }
