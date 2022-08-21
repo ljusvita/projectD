@@ -22,7 +22,7 @@ public class RouterConfig {
   @Bean
   public RouterFunction<ServerResponse> getLoto7(Loto7Handler loto7Handler) {
     return RouterFunctions.route(
-        RequestPredicates.GET("/loto/７").and(RequestPredicates.accept(MediaType.APPLICATION_JSON)),
+        RequestPredicates.GET("/loto/7").and(RequestPredicates.accept(MediaType.APPLICATION_JSON)),
         loto7Handler::loto7);
   }
 }
