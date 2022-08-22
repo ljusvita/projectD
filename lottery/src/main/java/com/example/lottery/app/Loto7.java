@@ -1,7 +1,9 @@
 package com.example.lottery.app;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 import org.apache.commons.lang3.RandomUtils;
 
 public class Loto7 {
@@ -16,8 +18,8 @@ public class Loto7 {
     this.numbers = numbers;
   }
 
-  public Set<Integer> getNumbers() {
-    return numbers;
+  public List<Integer> getNumbers() {
+    return this.numbers.stream().sorted().collect(Collectors.toList());
   }
 
   public void quickPick() {
