@@ -1,11 +1,10 @@
 package com.example.lottery.app;
 
-import org.apache.commons.lang3.RandomUtils;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import org.apache.commons.lang3.RandomUtils;
 
 public class Loto7 {
 
