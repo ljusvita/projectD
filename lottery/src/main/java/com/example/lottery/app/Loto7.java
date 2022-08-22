@@ -21,7 +21,7 @@ public class Loto7 {
   }
 
   public void quickPick() {
-    for (int i = 0; i < 7; i++) {
+    while (this.numbers.size() < 7) {
       this.numbers.add(RandomUtils.nextInt(1, 38));
     }
   }
