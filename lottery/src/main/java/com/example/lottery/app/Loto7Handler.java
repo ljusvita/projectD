@@ -19,6 +19,7 @@ public class Loto7Handler {
   public Mono<ServerResponse> loto7(ServerRequest request) {
     return ServerResponse.ok()
         .contentType(MediaType.APPLICATION_JSON)
+        .header("Access-Control-Allow-Origin", "*")
         .body(Mono.just(new Loto7Service().pick()), Loto7.class);
   }
 }
