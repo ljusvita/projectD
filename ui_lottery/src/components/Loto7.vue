@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import {ref, onMounted} from "vue";
+import { ref, onMounted } from "vue";
 
 export default {
   name: 'Loto7Post',
@@ -33,7 +33,7 @@ export default {
       loading.value = true;
       // I prefer to use fetch
       // you can use use axios as an alternative
-      return fetch('http://docker:18080/loto/7', {
+      return fetch('http://126.40.1.24:18080/loto/7', {
         method: 'get',
         headers: {
           'content-type': 'application/json'
