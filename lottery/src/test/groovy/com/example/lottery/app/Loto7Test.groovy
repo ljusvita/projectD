@@ -1,6 +1,5 @@
 package com.example.lottery.app
 
-import spock.lang.Ignore
 import spock.lang.Specification
 
 class Loto7Test extends Specification {
