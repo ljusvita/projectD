@@ -1,9 +1,8 @@
 package com.example.lottery.app;
 
-import org.apache.commons.lang3.RandomUtils;
-
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.lang3.RandomUtils;
 
 /** 로또6 도메인 클래스 */
 public class Loto6 {
