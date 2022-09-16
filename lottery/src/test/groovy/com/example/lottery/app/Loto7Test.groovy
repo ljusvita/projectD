@@ -1,12 +1,11 @@
 package com.example.lottery.app
 
-import spock.lang.Ignore
 import spock.lang.Specification
 
 class Loto7Test extends Specification {
 
     def setup() {
-        Loto7 loto7 = new Loto7()
+        Loto7 loto7 = new Loto7.builder().build()
         assert loto7.getNumbers().size() == 0
     }
 
