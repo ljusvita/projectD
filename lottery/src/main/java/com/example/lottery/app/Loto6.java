@@ -1,7 +1,10 @@
 package com.example.lottery.app;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+
 import org.apache.commons.lang3.RandomUtils;
 
 /** 로또6 도메인 클래스 */
@@ -15,8 +18,8 @@ public class Loto6 {
     this.numbers = builder.pickingNumbers;
   }
 
-  public Set<Integer> getNumbers() {
-    return numbers;
+  public List<Integer> getNumbers() {
+    return this.numbers.stream().sorted().collect(Collectors.toList());
   }
 
   public static class builder {
