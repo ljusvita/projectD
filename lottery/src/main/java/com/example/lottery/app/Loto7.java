@@ -19,6 +19,10 @@ public class Loto7 {
     this.numbers = new HashSet<>();
   }
 
+  public Loto7(builder builder) {
+    this.numbers = builder.pickingNumbers;
+  }
+
   /**
    * setter. Set 타입 선택된 번호를 저장하는 메소드
    *
@@ -41,6 +45,21 @@ public class Loto7 {
   public void quickPick() {
     while (this.numbers.size() < LOTO7_NECESSARY_NUMBER) {
       this.numbers.add(RandomUtils.nextInt(1, 38));
+    }
+  }
+
+  public static class builder {
+    private Set<Integer> pickingNumbers = new HashSet<>();
+
+    public builder quickPick() {
+      while (pickingNumbers.size() < LOTO7_NECESSARY_NUMBER) {
+        pickingNumbers.add(RandomUtils.nextInt(1, 38));
+      }
+      return this;
+    }
+
+    public Loto7 build(){
+      return new Loto7(this);
     }
   }
 }
