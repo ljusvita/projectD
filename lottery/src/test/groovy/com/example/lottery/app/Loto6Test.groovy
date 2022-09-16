@@ -5,17 +5,14 @@ import spock.lang.Specification
 class Loto6Test extends Specification {
 
     def setup() {
-        Loto6 loto6 = new Loto6()
+        Loto6 loto6 = new Loto6.builder().build()
         assert loto6.getNumbers().size() == 0
     }
 
     def "로또6가 랜덤으로 6개 무작위 번호를 생성 할 것"() {
         // 테스트 대상의 실행에 전제되는 조건
-        given:
-        Loto6 loto6 = new Loto6()
-
         when:
-        loto6.quickPick()
+        Loto6 loto6 = new Loto6.builder().quickPick().build()
 
         then:
         loto6.getNumbers().size() == 6
@@ -24,11 +21,8 @@ class Loto6Test extends Specification {
     def "로또6 퀵픽 실행 후 매번 다른 결과가 생성될 것"() {
         // 테스트 대상의 실행에 전제되는 조건
         given:
-        Loto6 firstGameOfLoto6 = new Loto6()
-        firstGameOfLoto6.quickPick()
-
-        Loto6 secondGameOfLoto6 = new Loto6()
-        secondGameOfLoto6.quickPick()
+        Loto6 firstGameOfLoto6 = new Loto6.builder().quickPick().build()
+        Loto6 secondGameOfLoto6 = new Loto6.builder().quickPick().build()
 
         // 테스트 대상의 실행
         when:
