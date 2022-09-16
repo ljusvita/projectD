@@ -17,7 +17,7 @@ public class Loto6 {
   /*
   로또6에 필요한 숫자
    */
-  private static final int LOTO6_NECESSARY_NUMBER = 6;
+  private static final int NECESSARY_LOTO6_NUMBERS = 6;
 
   /*
   로또6 생성자
@@ -42,7 +42,7 @@ public class Loto6 {
 
     /** 자동선택 메소드. 선택된 번호가 6개가 될때까지 1부터 43까지의 숫자를 골라 저장 */
     public Loto6.builder quickPick() {
-      while (pickingNumbers.size() < LOTO6_NECESSARY_NUMBER) {
+      while (pickingNumbers.size() < NECESSARY_LOTO6_NUMBERS) {
         pickingNumbers.add(RandomUtils.nextInt(1, 43));
       }
       return this;
