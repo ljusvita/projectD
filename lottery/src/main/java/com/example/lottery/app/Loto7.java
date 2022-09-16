@@ -58,7 +58,7 @@ public class Loto7 {
       return this;
     }
 
-    public Loto7 build(){
+    public Loto7 build() {
       return new Loto7(this);
     }
   }
