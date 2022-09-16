@@ -23,15 +23,11 @@ class Loto7Test extends Specification {
         loto7.getNumbers().size() == 7
     }
 
-    @Ignore
     def "로또7 퀵픽 실행 후 매번 다른 결과가 생성될 것"() {
         // 테스트 대상의 실행에 전제되는 조건
         given:
-        Loto7 firstGameOfLoto7 = new Loto7()
-        firstGameOfLoto7.quickPick()
-
-        Loto7 secondGameOfLoto7 = new Loto7()
-        secondGameOfLoto7.quickPick()
+        Loto7 firstGameOfLoto7 = new Loto7.builder().quickPick().build()
+        Loto7 secondGameOfLoto7 = new Loto7.builder().quickPick().build()
 
         // 테스트 대상의 실행
         when:
