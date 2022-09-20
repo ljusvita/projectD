@@ -9,7 +9,9 @@ import org.apache.commons.lang3.RandomUtils;
 /** 로또7 도메인 클래스 */
 public class Loto7 {
 
-  /** 선택된 번호를 저장하는 Set 타입 변수 */
+  /*
+  선택된 번호를 저장하는 Set 타입 변수
+  */
   private Set<Integer> numbers;
 
   private static final int LOTO7_NECESSARY_NUMBER = 7;
