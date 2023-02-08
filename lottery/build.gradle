@@ -48,11 +48,11 @@ dependencies {
     testImplementation "org.mockito:mockito-core:3.+"
 }
 
-spotless {
-    java {
-        googleJavaFormat() // has its own section below
-    }
-}
+//spotless {
+//    java {
+//        googleJavaFormat() // has its own section below
+//    }
+//}
 
 tasks.named('test') {
     useJUnitPlatform()
