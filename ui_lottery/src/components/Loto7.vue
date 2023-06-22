@@ -1,11 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      1, 2, 3, 4, 5, 6, 7
-    </p>
     <ul v-if="!loading && data && data.length">
-      {{ data.value }}
+      {{ data }}
     </ul>
   </div>
   <p v-if="loading">
@@ -17,7 +14,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
+import {onMounted, ref} from "vue";
 
 export default {
   name: 'Loto7Post',
@@ -33,7 +30,7 @@ export default {
       loading.value = true;
       // I prefer to use fetch
       // you can use use axios as an alternative
-      return fetch('http://126.40.1.24:18080/loto/7', {
+      return fetch('http://localhost:18080/loto7', {
         method: 'get',
         headers: {
           'content-type': 'application/json'
@@ -48,13 +45,13 @@ export default {
               throw error;
             }
             console.log(res);
-            console.log(res.json());
 
             return res.json();
           })
           .then(json => {
             // set the response data
-            data.value = json.data;
+            console.log(json)
+            data.value = json.numbers;
           })
           .catch(err => {
             error.value = err;
