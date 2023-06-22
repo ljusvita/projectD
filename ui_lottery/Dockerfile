@@ -1,14 +1,7 @@
-FROM node:18-alpine as build-stage
+FROM nginx:stable-alpine
 
-WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
-COPY package*.json ./
-RUN npm install --slient
-COPY . .
-RUN npm run build
-
-FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/dist /usr/share/nginx/html
+COPY ./dist /app/dist
+COPY project-d.conf /etc/nginx/conf.d/
 
 EXPOSE 8081
 
