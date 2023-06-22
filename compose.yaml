@@ -2,11 +2,6 @@ version: "3"
 
 services:
 
-  nginx:
-    image: ljusvita/lottery_nginx:0.0.1
-    ports:
-      - "8080:80"
-
   ui:
     image: ljusvita/lottery_vue:0.0.1
     ports:
