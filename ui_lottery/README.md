@@ -1,5 +1,14 @@
 # lottery_ui
 
+## Environment
+```
+node -v
+v18.16.1
+
+npm -v
+9.5.1
+```
+
 ## Project setup
 
 ```
