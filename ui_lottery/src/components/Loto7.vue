@@ -29,7 +29,7 @@ export default {
     function fetchData() {
       loading.value = true;
       // I prefer to use fetch
-      // you can use use axios as an alternative
+      // you can use axios as an alternative
       return fetch('http://localhost:18080/loto7', {
         method: 'get',
         headers: {
