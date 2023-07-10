@@ -60,3 +60,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# libraries
+.lib
+
