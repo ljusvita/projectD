@@ -16,4 +16,4 @@ class Loto7Gatherer:
         r.html.render()
 
         find_result = r.html.find('.js-lottery-number-pc')
-        self.latest_loto7_numbers = find_result[0:8]
+        self.latest_loto7_numbers = find_result[0:7]

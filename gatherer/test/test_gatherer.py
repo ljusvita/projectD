@@ -5,4 +5,7 @@ def test_test():
     assert True == True
 
 def test_gatherer():
-    assert Loto7Gatherer != None
+    g = Loto7Gatherer()
+    g.gather()
+    result = g.check()
+    assert len(result) == 7
