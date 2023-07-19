@@ -1,5 +1,5 @@
 import pytest
-from loto7.loto7_gatherer import Loto7Gatherer
+from ..loto7.loto7_gatherer import Loto7Gatherer
 
 def test_test():
     assert True == True
