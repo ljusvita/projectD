@@ -65,5 +65,4 @@ pnpm-debug.log*
 .lib
 
 # python
-/.pytest_cache
-/**/__pycache__
+*.pyc
