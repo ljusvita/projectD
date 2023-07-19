@@ -6,3 +6,8 @@
 
 ## 구현 내용
 어떤 로또를 구매 하였는지(e.g. ロト６、ロト７、ロトミニ)에 따라, 무작위로 생성한 번호와 당첨여부를 출력하는 페이지를 생성함.
+
+## Why series
+### Database
+#### spring data r2dbc(mysql)
+- due to using webflux, asynchronous database driver needed.
