@@ -3,7 +3,6 @@ import loto7_gatherer
 
 @route('/')
 def index():
-    gatherer = loto7_gatherer.Loto7Gatherer
-    return loto7_gatherer.Loto7Gatherer.check(loto7_gatherer)
+    return {}
 
 run(host='localhost', port=18081)
