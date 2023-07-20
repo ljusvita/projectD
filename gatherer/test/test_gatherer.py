@@ -9,3 +9,4 @@ def test_gatherer():
     g.gather()
     result = g.check()
     assert len(result) == 7
+    assert isinstance(result[0], int)
